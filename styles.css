@@ -29,7 +29,7 @@ body {
 
 .navbar {
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 27px;
     letter-spacing: 4px;
     padding: 0 12px;
     background-color: var(--primary-color);
@@ -39,7 +39,6 @@ body {
     top: 0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 5px 0px, rgba(0, 0, 0, 0.12) 0px 2px 10px 0px;
     z-index: 999;
-    margin-bottom: 120px;
     text-transform: uppercase;
 }
 
@@ -93,6 +92,11 @@ menu {
     background-repeat: no-repeat;
     min-height: 100%;
     filter: grayscale(50%);
+    position: relative;
+}
+
+.banner-element{
+    padding: 100px 0;
 }
 
 .banner-text .start {
@@ -104,7 +108,7 @@ menu {
 }
 
 .banner-text {
-    padding: 112px 48px;
+    padding: 112px 48px 180px 48px;
 }
 
 .banner-text .stop {
@@ -132,4 +136,29 @@ menu {
 
 .banner-text .learn{
     margin-top: 36px;
+}
+
+.icons{
+    position: absolute;
+    bottom: 32px;
+    left: 48px;
+    padding: 20px 0;
+}
+
+.flex-icon{
+    display: flex;
+    gap: 10px;
+    color: #fff;
+}
+
+.flex-icon li{
+    list-style: none;
+}
+
+.flex-icon li a{
+    text-decoration: none;
+}
+
+.fa-brands{
+    color: var(--gray-color);
 }
