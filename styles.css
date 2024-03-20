@@ -12,8 +12,10 @@
 
 :root {
     --primary-color: #fff;
+    --secondary-color: #000;
     --gray-color: #616161;
     --offwhite: #f1f1f1;
+    --gray-light: #828282;
     --font-size: 18px;
 }
 
@@ -21,6 +23,36 @@
 
 body {
     font-family: "Raleway", sans-serif;
+}
+
+/* ------------- All section title style --------- */
+
+.title {
+    text-align: center;
+    margin-top: 120px;
+    font-weight: normal;
+    line-height: 45px;
+    margin-bottom: 64px;
+}
+
+.text-1 {
+    font-size: 24px;
+}
+
+.text-2 {
+    font-size: 15px;
+    line-height: 38px;
+}
+
+.container {
+    margin: 140px 24px;
+}
+
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 30px;
 }
 
 /* -------------------
@@ -45,30 +77,31 @@ body {
 .d-flex {
     display: flex;
     justify-content: space-between;
-    height: 80px;
-}
-
-.logo {
-    padding: 25px 16px;
+    align-items: center;
+    height: 60px;
 }
 
 .special {
     color: var(--primary-color);
-    background-color: #000;
+    background-color: var(--secondary-color);
     padding: 10px;
     font-weight: 700;
+}
+
+.logo {
+    padding: 18px 16px;
 }
 
 .navbar li,
 menu {
     list-style: none;
-    padding: 25px 16px;
+    padding: 12px 16px;
     cursor: pointer;
 }
 
 .navbar li a {
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
 }
 
 .menu {
@@ -95,7 +128,7 @@ menu {
     position: relative;
 }
 
-.banner-element{
+.banner-element {
     padding: 100px 0;
 }
 
@@ -120,7 +153,7 @@ menu {
 }
 
 .banner-text .learn a {
-    color: black;
+    color: var(--secondary-color);
     text-decoration: none;
     font-size: var(--font-size);
     padding: 18px;
@@ -129,36 +162,514 @@ menu {
     line-height: 32px;
 }
 
-.banner-text .learn:hover a{
-    background-color: white;
+.banner-text .learn:hover a {
+    background-color: var(--primary-color);
     opacity: 0.8;
 }
 
-.banner-text .learn{
+.banner-text .learn {
     margin-top: 36px;
 }
 
-.icons{
+.icons {
     position: absolute;
     bottom: 32px;
     left: 48px;
     padding: 20px 0;
 }
 
-.flex-icon{
+.flex-icon {
     display: flex;
     gap: 10px;
-    color: #fff;
+    color: var(--primary-color);
 }
 
-.flex-icon li{
+.flex-icon li {
     list-style: none;
 }
 
-.flex-icon li a{
+.flex-icon li a {
     text-decoration: none;
 }
 
-.fa-brands{
+.fa-brands {
     color: var(--gray-color);
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.fa-brands:hover {
+    color: var(--primary-color);
+    font-size: 22px;
+}
+
+/* ----------------------------
+    About the company styles
+------------------------------- */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: space-between
+}
+
+.about-card {
+    text-align: center;
+    border: 1px solid var(--offwhite);
+    padding: 16px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3);
+
+}
+
+.about-card .fa-solid {
+    font-size: 64px;
+    line-height: 64px;
+}
+
+.about-card h3 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 64px;
+}
+
+.about-card p {
+    font-size: 16px;
+    line-height: 27px;
+}
+
+/* ----------------------------
+    we know design styles
+------------------------------- */
+
+.design-section {
+    background: var(--offwhite);
+}
+
+.design-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 120px 48px;
+}
+
+.design-text p {
+    margin-bottom: 16px;
+}
+
+.text-we {
+    font-size: 36px;
+}
+
+.design-img img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.design-btn {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    border: none;
+}
+
+.design-btn:hover {
+    background-color: var(--gray-light);
+    cursor: pointer;
+    border: none;
+}
+
+/* ------------------------------
+    The Team section styles
+--------------------------------- */
+
+.team-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+}
+
+.team-card {
+    border: 1px solid var(--offwhite);
+    box-shadow: rgba(100, 100, 111, 0.2) 3px 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.team-card img {
+    max-width: 100%;
+    height: auto;
+    transition: transform .2s;
+}
+
+.team-card img:hover {
+    transform: scale(1.1);
+    max-width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h1,
+h3 {
+    font-weight: normal;
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+.card-content h3 {
+    font-size: 15px;
+    color: #b4b4b4;
+}
+
+.card-content p {
+    color: var(--gray-light);
+    font-size: 15px;
+    padding: 18px 0;
+}
+
+.team-btn {
+    border: none;
+    padding: 10px 8px;
+    width: 100%;
+    font-size: 17px;
+    background-color: var(--offwhite);
+}
+
+.team-btn:hover {
+    border: none;
+    padding: 10px 8px;
+    width: 100%;
+    font-size: 17px;
+    background-color: var(--offwhite);
+    cursor: pointer;
+}
+
+/* ------------------------------
+    service section styles
+--------------------------------- */
+
+.gray-container {
+    background: var(--gray-color);
+    padding: 2.5rem;
+}
+
+.service-cart {
+    text-align: center;
+    color: var(--primary-color);
+    line-height: 1.8;
+    padding: 3.75rem 5rem;
+    border: 1px solid var(--gray-light);
+    border-radius: 50px 20px 30px;
+    background-color: var(--gray-light);
+    transition: 0.3s;
+}
+
+.service-cart:hover {
+    transform: rotate(30deg);
+}
+
+/*-----------------------
+    Our Work section
+------------------------- */
+
+.house-card {
+    position: relative;
+}
+
+.house-card img {
+    width: 100%;
+    opacity: 0.70;
+    transition: 0.3s;
+}
+
+.house-card:hover img {
+    width: 100%;
+    opacity: 1;
+}
+
+.house-card p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+}
+
+/*-----------------------
+    Our Skills section
+------------------------- */
+
+.skills-element{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    padding: 80px 30px;
+}
+
+.skills-text{
+    line-height: 1.4;
+}
+
+.meter p{
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+
+.meter-bg{
+    background-color: #9e9e9e;
+    width: 90%;
+}
+
+.meter1{
+    width: 90%;
+    background-color: var(--gray-color);
+    line-height: 1.8;
+    color: var(--primary-color);
+    text-align: center;
+}
+.meter2{
+    width: 85%;
+    background-color: var(--gray-color);
+    line-height: 1.8;
+    color: var(--primary-color);
+    text-align: center;
+}
+.meter3{
+    width: 75%;
+    background-color: var(--gray-color);
+    line-height: 1.8;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/*-----------------------
+    Pricing section
+------------------------- */
+
+#pricing{
+    background: var(--gray-color);
+    color: var(--primary-color);
+    padding: 30px 0;
+}
+
+.pricing-cart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    border: var(--offwhite);
+}
+
+.cart-1{
+    text-align: center;
+    width: 100%;
+}
+
+.cart-2{
+    text-align: center;
+    width: 100%;
+}
+
+.cart-1 header{
+    padding: 42px;
+    background-color: var(--secondary-color);
+    font-size: 24px;
+}
+
+.cart-2 header{
+    padding: 52px;
+    background-color: #f44336;
+    font-size: 24px;
+}
+
+.pricing-cart p{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 16px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sign-up{
+    background: var(--offwhite);
+    padding: 28px;
+}
+
+/*-----------------------
+    Contact section
+------------------------- */
+
+#contact{
+    background: var(--offwhite);
+    padding: 20px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.form input{
+    padding: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.map-img{
+    width: 100%;
+    margin-top: 60px;
+    filter: grayscale(70%);
+    margin-bottom: 120px;
+}
+
+.service-cart a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/*-----------------------
+    Footer section
+------------------------- */
+
+.footer{
+    text-align: center;
+    background: #000;
+    color: var(--primary-color);
+    padding: 30px;
+}
+
+
+.top-btn{
+    color: var(--secondary-color);
+    background: var(--offwhite);
+    padding: 10px;
+    text-decoration: none;
+}
+
+.top-btn:hover{
+    background: #cccccc;
+}
+
+.footer-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 40px;
+}
+
+.footer-icon a{
+    text-decoration: none;
+}
+.footer-icon li{
+    list-style: none;
+    color: white;
+}
+
+.footer-icon li a{
+    text-decoration: none;
+}
+
+.footer-icon i{
+    color: var(--primary-color);
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .menu {
+        display: none;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .banner-text .start {
+        font-size: 36px;
+        line-height: 1.8;
+    }
+
+    .banner-text .stop {
+        font-size: 18px;
+        line-height: 27px;
+        padding-bottom: 50px;
+    }
+
+    .about,
+    .team-section,
+    .d-grid,
+    .skills-element {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .service-cart:hover {
+        transform: rotate(0deg);
+    }
+
+    .pricing-cart{
+        flex-direction: column;
+    }
+
+    .design-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 120 8px;
+    }
+
+    .house-card p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .house-card img{
+        opacity: 1;
+    }
+
+    .skills-element{
+        padding: 80px 0px;
+    }
+
+    .meter-bg{
+        background-color: #9e9e9e;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+        font-size: 10px;
+        /* line-height: 22px; */
+        letter-spacing: 3px;
+    }
+
+    .about,
+    .team-section,
+    .d-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-cart:hover {
+        transform: rotate(0deg);
+    }
+    .house-card img{
+        opacity: 1;
+    }
 }
